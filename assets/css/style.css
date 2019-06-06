@@ -1,0 +1,10 @@
+header {
+    background: lightcoral;
+    font-size: 50px;
+    text-align: center;
+    font-weight: bolder;
+    border-style: dashed;
+}
+body {
+    background: url(/Users/stephaniemattern/Desktop/TriviaGame/assets/images/bananas.png);
+}
