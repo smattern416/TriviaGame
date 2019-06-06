@@ -21,21 +21,46 @@ var optionTwo =  ["Laughs", "Drinks Water", "Drivers License", "Outer Space", "F
 var optionThree =  ["Cries", "Turns on faucet", "Pest Control License", "Constipation", "Set of Dentures"];  
 var optionFour =  ["Yawns", "Opens fridge", "Fishing License", "Cars", "A Carved Piece of Wood"];  
 
- 
-},
-{
-// from here you just copy and paste what you did for the first question, separated by a comma
-}]
+//  functions
+function showHolders() {
+    $("#question-holder").show();
+    $("#choice-holder-1").show();
+    $("#choice-holder-2").show();
+    $("#choice-holder-3").show();
+    $("#choice-holder-4").show();
+}
 
-// a variable to hold the set interval
-var timer;
+function hideHolders() {
+    $("#question-holder").hide();
+    $("#choice-holder-1").hide();
+    $("#choice-holder-2").hide();
+    $("#choice-holder-3").hide();
+    $("#choice-holder-4").hide();
+}
+function hideResults() {
+    $("#correct-holder").hide();
+    $("#incorrect-holder").hide();
+    $("#unanswered-holder").hide();
+    $("#restart-holder").hide();
+}
+function displayQuestion () {
+    hideResults();
+    $("#answer-holder").hide();
+    $("#image-holder").hide();
+    $("#time-holder").show();
+    showHolders();
+    $("#question-holder").html(question[count]);
+    $("#choice-holder-1").html(optionOne[count]);
+    $("#choice-holder-2").html(optionTwo[count]);
+    $("#choice-holder-3").html(optionThree[count]);
+    $("#choice-holder-4").html(optionFour[count]);
+}
+$("#choice-holder-1").on("click", checkAnswer) 
+    $("#choice-holder-2").on("click", checkAnswer)
+    $("#choice-holder-3").on("click", checkAnswer)
+    $("#choice-holder-4").on("click", checkAnswer)
 
-var game = {
-    questions: questions,
-    currentQuestion: 0,
-    counter: countStartNumber,
-    correct: 0,
-    incorrect: 0,
+
 
     countdown: function(){
         // decrement counter, use jquery to put dynamically put logic onto the page, if statement - if time is up, run time up function
