@@ -1,3 +1,6 @@
+$(document).ready(function(){
+    
+
 // User presses start to play the game
 // When user selects an answer, they can either get it right or wrong or the time runs out
 // create 4 variables
@@ -28,7 +31,7 @@ var game = {
     },
     loadQuestion: function() {
         // set timer, timer = setInterval(game.countdown.1000), dynamically add question into vard variable- card.html ("<h2> + </h2>"), for loop run through the questions, a dynamically addded buttons with answer options
-        
+
     }
 
 }
