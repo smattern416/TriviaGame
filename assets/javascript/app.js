@@ -1,13 +1,18 @@
 $(document).ready(function(){
-    
 
-// User presses start to play the game
-// When user selects an answer, they can either get it right or wrong or the time runs out
-// create 4 variables
-var card = $("#quiz-area");
-var countStartNumber = 30;
-var question = [{
-    // question: a string,
+// variables
+
+var time = 45;
+var count = 0;
+var time;
+var selection = false;
+var right = 0;
+var wrong = 0;
+
+
+var question = ["The average person does what 13 times a day?", "The Average American does what 22 times a day?", "In California you can't legally buy a mousetrap without having a what?", "In California you can't legally buy a mousetrap without having a what?", "Coprastastaphobia is the fear of what?", "The first puck used In the game of ice hockey game, what was the first puck used made out of?"]
+ var answer =    
+// question: a string,
     // answers: within an array holding 4 strings
     // correct answer: a string- whatever is correct from above
     //
