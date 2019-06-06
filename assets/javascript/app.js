@@ -9,13 +9,19 @@ var selection = false;
 var right = 0;
 var wrong = 0;
 
-
+ // question: a string
 var question = ["The average person does what 13 times a day?", "The Average American does what 22 times a day?", "In California you can't legally buy a mousetrap without having a what?", "Coprastastaphobia is the fear of what?", "The first puck used In the game of ice hockey game, what was the first puck used made out of?"];
- var answer =  ["Laughs", "Opens fridge", "Hunting License", "Constipation", "Frozen Cow Manure"];  
-// question: a string,
-    // answers: within an array holding 4 strings
-    // correct answer: a string- whatever is correct from above
-    //
+ 
+// correct answers:
+var answer =  ["Laughs", "Opens fridge", "Hunting License", "Constipation", "Frozen Cow Manure"];  
+
+// multiple choice options:
+var optionOne =  ["Smiles", "Texts", "Hunting License", "Public Speaking", "Can of Beans"];  
+var optionTwo =  ["Laughs", "Drinks Water", "Drivers License", "Outer Space", "Frozen Cow Manure"];  
+var optionThree =  ["Cries", "Turns on faucet", "Pest Control License", "Constipation", "Set of Dentures"];  
+var optionFour =  ["Yawns", "Opens fridge", "Fishing License", "Cars", "A Carved Piece of Wood"];  
+
+ 
 },
 {
 // from here you just copy and paste what you did for the first question, separated by a comma
