@@ -21,6 +21,7 @@ var optionTwo =  ["Laughs", "Drinks Water", "Drivers License", "Outer Space", "F
 var optionThree =  ["Cries", "Turns on faucet", "Pest Control License", "Constipation", "Set of Dentures"];  
 var optionFour =  ["Yawns", "Opens fridge", "Fishing License", "Cars", "A Carved Piece of Wood"];  
 
+// create click events
 //  functions
 function showHolders() {
     $("#question-holder").show();
@@ -60,21 +61,16 @@ $("#choice-holder-1").on("click", checkAnswer)
     $("#choice-holder-3").on("click", checkAnswer)
     $("#choice-holder-4").on("click", checkAnswer)
 
-
-
-    countdown: function(){
-        // decrement counter, use jquery to put dynamically put logic onto the page, if statement - if time is up, run time up function
-    },
-    loadQuestion: function() {
-        // set timer, timer = setInterval(game.countdown.1000), dynamically add question into vard variable- card.html ("<h2> + </h2>"), for loop run through the questions, a dynamically addded buttons with answer options
-
+function checkAnswer() {
+    hideHolders() {
+        if($this).text() === answer[count] {
+            stopTime();
+            isSelected = true;
+            $("#answer-holder").show();
+        }
     }
 
+    hideHolders();
+
+    if
 }
-
-
-// create click events
-
-$(document).on("click", "#start", functiom () {
-    $("#sub-wrapper").prepend("<h2>Time Remaining: <span id='counter-number'")
-})
