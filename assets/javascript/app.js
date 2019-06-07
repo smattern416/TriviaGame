@@ -114,7 +114,14 @@ function checkAnswer() {
             checkGameEnd();
         }
     }
-    
+    function startTime() {
+        clearInterval(clock);
+        clock = setInterval(displayTime, 1000);
+    }
+    function stopTime() {
+        clearInterval(clock);
+        clock = setInterval(displayTime, 1000);
+    }
 
     hideHolders();
 
