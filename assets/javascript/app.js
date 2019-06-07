@@ -25,18 +25,18 @@ var optionFour =  ["Yawns", "Opens fridge", "Fishing License", "Cars", "A Carved
 //  functions
 function showHolders() {
     $("#question-holder").show();
-    $("#choice-holder-1").show();
-    $("#choice-holder-2").show();
-    $("#choice-holder-3").show();
-    $("#choice-holder-4").show();
+    $("#choice1-holder").show();
+    $("#choice2-holder").show();
+    $("#choice3-holder").show();
+    $("#choice4-holder").show();
 }
 
 function hideHolders() {
     $("#question-holder").hide();
-    $("#choice-holder-1").hide();
-    $("#choice-holder-2").hide();
-    $("#choice-holder-3").hide();
-    $("#choice-holder-4").hide();
+    $("#choice1-holder").hide();
+    $("#choice2-holder").hide();
+    $("#choice3-holder").hide();
+    $("#choice4-holder").hide();
 }
 function hideResults() {
     $("#correct-holder").hide();
@@ -47,19 +47,18 @@ function hideResults() {
 function displayQuestion () {
     hideResults();
     $("#answer-holder").hide();
-    $("#image-holder").hide();
     $("#time-holder").show();
     showHolders();
     $("#question-holder").html(question[count]);
-    $("#choice-holder-1").html(optionOne[count]);
-    $("#choice-holder-2").html(optionTwo[count]);
-    $("#choice-holder-3").html(optionThree[count]);
-    $("#choice-holder-4").html(optionFour[count]);
+    $("#choice1-holder").html(optionOne[count]);
+    $("#choice2-holder").html(optionTwo[count]);
+    $("#choice3-holder").html(optionThree[count]);
+    $("#choice4-holder").html(optionFour[count]);
 }
 $("#choice-holder-1").on("click", checkAnswer) 
-    $("#choice-holder-2").on("click", checkAnswer)
-    $("#choice-holder-3").on("click", checkAnswer)
-    $("#choice-holder-4").on("click", checkAnswer)
+    $("#choice2-holder").on("click", checkAnswer)
+    $("#choice3-holder").on("click", checkAnswer)
+    $("#choice4-holder").on("click", checkAnswer)
 
 function checkAnswer() {
     hideHolders() {
