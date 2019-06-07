@@ -41,7 +41,7 @@ function hideHolders() {
 function hideResults() {
     $("#correct-holder").hide();
     $("#incorrect-holder").hide();
-    $("#unanswered-holder").hide();
+    $("#noAnswer-holder").hide();
     $("#restart-holder").hide();
 }
 function displayQuestion () {
@@ -66,6 +66,18 @@ function checkAnswer() {
             stopTime();
             isSelected = true;
             $("#answer-holder").show();
+            $("#answer-holder").html("That's right! The answer is: " + answer[count]);
+            correct++;
+            count++;
+
+        }
+        else {
+            stopTime();
+            isSelected = true;
+            $("#answer-holder").show();
+            $("#answer-holder").html("Wrong! The answer is: " + answer[count]);
+            correct++;
+            count++;
         }
     }
 
