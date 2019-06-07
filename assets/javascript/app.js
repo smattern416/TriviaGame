@@ -109,7 +109,7 @@ function checkAnswer() {
             stopTime();
             $("#answer-holder").show();
             $("#answer-holder").html("Your time is up! The answer is: " + answer[count]);
-            unanswered++;
+            noAnswer++;
             count++;
             checkGameEnd();
         }
@@ -134,7 +134,10 @@ function checkAnswer() {
         $("#correct-holder").html("Correct: " + correct);
         $("#wrong-holder").show();
         $("#wrong-holder").html("Wrong: " + wrong);
-        $("#correct-holder").show();
+        $("#noAnswer-holder").show();
+        $("#noAnswer-holder").html("No answer: " + noAnswer);
+        $("#restart-holder").show();
+        $("#restart-holder").html("Click Start to play again!");
     }
 
     hideHolders();
