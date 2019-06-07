@@ -79,6 +79,21 @@ function checkAnswer() {
             correct++;
             count++;
         }
+        checkGameEnd();
+    }
+
+    function checkGameEnd() {
+        if(count === question.length) {
+            $("#time-holder").hide();
+            showResults();
+            count = 0;
+            $(".start").show();
+            $(".start").on("click", function() {
+                resetResults();
+                startGame();
+                
+            })
+        }
     }
 
     hideHolders();
