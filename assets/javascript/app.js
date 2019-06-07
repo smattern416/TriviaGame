@@ -99,6 +99,22 @@ function checkAnswer() {
         time = 31;
     }
     
+    function displayTime() {
+        time--;
+        $("#time-holder").html("Time remaining: " + time);
+
+
+        if(time <= 0) {
+            hideHolders();
+            stopTime();
+            $("#answer-holder").show();
+            $("#answer-holder").html("Your time is up! The answer is: " + answer[count]);
+            unanswered++;
+            count++;
+            checkGameEnd();
+        }
+    }
+    
 
     hideHolders();
 
