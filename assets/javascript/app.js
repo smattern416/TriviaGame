@@ -40,7 +40,7 @@ function hideHolders() {
 }
 function hideResults() {
     $("#correct-holder").hide();
-    $("#incorrect-holder").hide();
+    $("#wrong-holder").hide();
     $("#noAnswer-holder").hide();
     $("#restart-holder").hide();
 }
@@ -120,7 +120,21 @@ function checkAnswer() {
     }
     function stopTime() {
         clearInterval(clock);
-        clock = setInterval(displayTime, 1000);
+        resetTime;
+        if(count < question.length - 1) {
+            setTimeout(startTime, 2000);
+            setTimeout = (displayQuestion, 3000);  
+        }
+        
+    }
+
+    resetTime();
+    function showResults() {
+        $("#correct-holder").show();
+        $("#correct-holder").html("Correct: " + correct);
+        $("#wrong-holder").show();
+        $("#wrong-holder").html("Wrong: " + wrong);
+        $("#correct-holder").show();
     }
 
     hideHolders();
