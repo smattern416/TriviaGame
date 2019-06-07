@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 // variables
 
-var time = 45;
+var time = 30;
 var count = 0;
 var time;
 var selection = false;
@@ -91,10 +91,14 @@ function checkAnswer() {
             $(".start").on("click", function() {
                 resetResults();
                 startGame();
-                
-            })
+
+            });
         }
     }
+    function resetTime() {
+        time = 31;
+    }
+    
 
     hideHolders();
 
