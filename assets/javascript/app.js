@@ -139,8 +139,21 @@ function checkAnswer() {
         $("#restart-holder").show();
         $("#restart-holder").html("Click Start to play again!");
     }
+// resetting the game
+    function resetResults() {
+        correct = 0;
+        wrong = 0;
+        noAnswer = 0;
+    }
 
-    hideHolders();
+    function startGame() {
+        $(".start").hide();
+        startTime;
+        displayQuestion();
+    }
+    // Start the game with clicking the start button
+    $(".start").on("click", function(){
+        startGame();
+    });
 
-    if
-}
+});
