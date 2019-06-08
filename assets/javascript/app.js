@@ -134,9 +134,9 @@ var optionFour =  ["Yawns", "Opens fridge", "Fishing License", "Cars", "A Carved
     // Show Results    
     function showResults() {
         $("#right-holder").show();
-        $("#right-holder").html("right: " + right);
+        $("#right-holder").html("Right: " + right);
         $("#wrong-holder").show();
-        $("#wrong-holder").html("wrong: " + wrong);
+        $("#wrong-holder").html("Wrong: " + wrong);
         $("#noAnswer-holder").show();
         $("#noAnswer-holder").html("noAnswer: " + noAnswer);
         $("#restart-holder").show();
