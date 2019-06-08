@@ -8,11 +8,12 @@ var time;
 var selection = false;
 var right = 0;
 var wrong = 0;
+var unanswered = 0;
 
  // question: a string
 var question = ["The average person does what 13 times a day?", "The Average American does what 22 times a day?", "In California you can't legally buy a mousetrap without having a what?", "Coprastastaphobia is the fear of what?", "The first puck used In the game of ice hockey game, what was the first puck used made out of?"];
  
-// correct answers:
+// Right answers:
 var answer =  ["Laughs", "Opens fridge", "Hunting License", "Constipation", "Frozen Cow Manure"];  
 
 // multiple choice options:
@@ -39,7 +40,7 @@ function hideHolders() {
     $("#choice4-holder").hide();
 }
 function hideResults() {
-    $("#correct-holder").hide();
+    $("#Right-holder").hide();
     $("#wrong-holder").hide();
     $("#noAnswer-holder").hide();
     $("#restart-holder").hide();
@@ -54,20 +55,49 @@ function displayQuestion () {
     $("#choice2-holder").html(optionTwo[count]);
     $("#choice3-holder").html(optionThree[count]);
     $("#choice4-holder").html(optionFour[count]);
+    
+    
+    $("#choice1-holder").hover(function() {
+        $(this).css("color", "gray");
+    },
+    function(){
+        $(this).css("color", "black");
+    });
+    $("#choice2-holder").hover(function() {
+        $(this).css("color", "gray");
+    },
+    function(){
+        $(this).css("color", "black");
+    });
+    $("#choice3-holder").hover(function() {
+        $(this).css("color", "gray");
+    },
+    function(){
+        $(this).css("color", "black");
+    });
+    $("#choice4-holder").hover(function() {
+        $(this).css("color", "gray");
+    },
+    function(){
+        $(this).css("color", "black");
+    });
 }
-$("#choice-holder-1").on("click", checkAnswer) 
+
+$("#choice1-holder").on("click", checkAnswer) 
     $("#choice2-holder").on("click", checkAnswer)
     $("#choice3-holder").on("click", checkAnswer)
     $("#choice4-holder").on("click", checkAnswer)
 
 function checkAnswer() {
-    hideHolders() {
-        if($this).text() === answer[count] {
+    hideHolders();
+
+        if($(this).text() === answer[count]) {
             stopTime();
             isSelected = true;
             $("#answer-holder").show();
             $("#answer-holder").html("That's right! The answer is: " + answer[count]);
-            correct++;
+            displayImage();
+            right++;
             count++;
 
         }
@@ -76,7 +106,8 @@ function checkAnswer() {
             isSelected = true;
             $("#answer-holder").show();
             $("#answer-holder").html("Wrong! The answer is: " + answer[count]);
-            correct++;
+            displayImage();
+            right++;
             count++;
         }
         checkGameEnd();
@@ -109,6 +140,7 @@ function checkAnswer() {
             stopTime();
             $("#answer-holder").show();
             $("#answer-holder").html("Your time is up! The answer is: " + answer[count]);
+            displayImage();
             noAnswer++;
             count++;
             checkGameEnd();
@@ -120,7 +152,7 @@ function checkAnswer() {
     }
     function stopTime() {
         clearInterval(clock);
-        resetTime;
+        resetTime();
         if(count < question.length - 1) {
             setTimeout(startTime, 2000);
             setTimeout = (displayQuestion, 3000);  
@@ -129,9 +161,10 @@ function checkAnswer() {
     }
 
     resetTime();
+
     function showResults() {
-        $("#correct-holder").show();
-        $("#correct-holder").html("Correct: " + correct);
+        $("#right-holder").show();
+        $("#right-holder").html("right: " + Right);
         $("#wrong-holder").show();
         $("#wrong-holder").html("Wrong: " + wrong);
         $("#noAnswer-holder").show();
@@ -141,7 +174,7 @@ function checkAnswer() {
     }
 // resetting the game
     function resetResults() {
-        correct = 0;
+        Right = 0;
         wrong = 0;
         noAnswer = 0;
     }
